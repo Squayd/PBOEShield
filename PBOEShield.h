@@ -11,20 +11,23 @@
  #ifndef _PBOESHIED_H_USED_
  #define _PBOESHIED_H_USED_
  
- #include<Servo.h>
+ #include "arduino.h"
+ #include "Servo.h"
  
  class PBOEShield
 {
   public:
     //functions
     PBOEShield();         //constructor
-    void StartupBeep();   //Plays a little tune when startup is complete
+    bool begin();         //Start the servos and play a beep
+    void startupBeep();   //Plays a little tune when startup is complete
+    void stopMoving();    //Set servos to not turn
     //variables
   private:
     //functions
     //variables
     Servo servoLeft;      //servo for left wheel
     Servo servoRight;     //servo for right wheel
-}
+};
  
  #endif
