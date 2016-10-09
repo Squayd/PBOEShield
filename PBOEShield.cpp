@@ -36,6 +36,6 @@
  
  void PBOEShield::stopMoving()
  {
-   servoLeft.writeMicroseconds(1000);
-   servoRight.writeMicroseconds(1000);
+   servoLeft.writeMicroseconds(1500);
+   servoRight.writeMicroseconds(1500);
  }
